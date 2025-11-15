@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MFS</title>
+    <!-- Google Fonts Start  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts End  -->
+    <!-- Css Link Start  -->
+    <link rel="stylesheet" href="src/all.min.css" />
+    <link rel="stylesheet" href="src/output.css" />
+    <!-- Css Link End  -->
+  </head>
+  <body class="font-outfit">
+    <!-- Login Screen Start  -->
+    <section id="fastHidden">
+      <div class="max-w-[800px] mx-auto text-center">
+        <div class="mockup-phone">
+          <div class="mockup-phone-camera"></div>
+          <div class="toast toast-top toast-center z-20">
+            <div class="alert bg-red-600" id="fastErrorMsg" hidden>
+              <span>Wrong Information</span>
+            </div>
+          </div>
+          <div
+            class="mockup-phone-display text-black grid place-content-center bg-[#ffffff]"
+          >
+            <div class="mt-8 w-[550px] px-[115px]">
+              <img src="src/assets/Fastlogo.png" alt="Fastlogo.png" />
+            </div>
+            <div class="hero">
+              <div class="hero-content flex-col lg:flex-row-reverse">
+                <div class="card w-full max-w-sm shrink-0 shadow-2xl">
+                  <div
+                    class="card-body w-[355px] bg-[#F4F5F7] rounded-2xl mt-[-200px]"
+                  >
+                    <fieldset class="fieldset">
+                      <label class="label text-[#080808] font-medium text-2xl">
+                        Number</label
+                      >
+                      <input
+                        type="number"
+                        class="p-2.5 border-0 bg-[#ffffff] text-[#080808] outline-0 rounded-2xl text-base"
+                        id="phNumber"
+                        placeholder="Phone Number"
+                      />
+                      <label class="label text-[#080808] font-medium text-2xl"
+                        >Pin Number</label
+                      >
+                      <input
+                        type="password"
+                        class="p-2.5 border-0 bg-[#ffffff] text-[#080808] outline-0 rounded-2xl text-base"
+                        id="pinNumber"
+                        placeholder="4 Digit Pin"
+                      />
+                      <button
+                        class="py-2 text-white text-2xl font-semibold bg-[#0874F2] rounded-4xl border-0 mt-4 cursor-pointer"
+                        id="loginBtn"
+                        hidden
+                      >
+                        Login
+                      </button>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Login Screen End  -->
+
+    <!-- Dashboard Screen Start  -->
+    <section id="secondHidden" hidden>
+      <div class="max-w-[800px] mx-auto text-center">
+        <div class="mockup-phone">
+          <div class="mockup-phone-camera"></div>
+          <div class="mockup-phone-display text-black bg-[#F4F5F7]">
+            <div
+              class="flex justify-between ml-8 mr-8 mt-3 font-semibold text-base"
+            >
+              <h5 class="text-left">9:41</h5>
+              <div class="flex">
+                <svg
+                  width="30"
+                  height="20"
+                  viewBox="0 0 30 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect x="2" y="14" width="4" height="4" fill="black" />
+                  <rect x="8" y="10" width="4" height="8" fill="black" />
+                  <rect x="14" y="6" width="4" height="12" fill="black" />
+                  <rect x="20" y="2" width="4" height="16" fill="black" />
+                </svg>
+                <div class="pr-1.5"><i class="fa-solid fa-wifi"></i></div>
+                <div class=""><i class="fa-solid fa-battery-half"></i></div>
+              </div>
+            </div>
+            <div class="flex mt-7 ml-7">
+              <img src="src/assets/logo.png" alt="logo.png" />
+              <div class="pt-2 text-[18px] font-extrabold">
+                <span id="sss">$</span><span id="totalMoney">45000</span>
+              </div>
+              <div
+                class="pl-[180px] pt-3.5 text-sm hover:text-blue-600 duration-150"
+                id="logoutBtn"
+              >
+                <a href="#"
+                  ><i class="fa-solid fa-arrow-right-from-bracket"></i> Log
+                  Out</a
+                >
+              </div>
+            </div>
+            <h5 class="text-left pl-20 mt-[-18px] text-sm">
+              Available Balance
+            </h5>
+            <div class="">
+              <h3 class="text-2xl font-extrabold text-left pl-5 mt-9">
+                🔥 Welcome to Payooo!
+              </h3>
+              <p class="text-base text-left pl-6 leading-6 mt-4">
+                Enjoy easy and convenient financial services with us. Cashout
+                charge is low and
+              </p>
+            </div>
+            <div class="flex justify-between items-center mt-7">
+              <div
+                class="text-left bg-[#080808]/10 w-[110px] px-3 py-6 ml-8 cursor-pointer rounded-2xl"
+                id="addMoneyBtn"
+              >
+                <img
+                  class="mx-auto"
+                  src="src/assets/Money1.png"
+                  alt="Money1.png"
+                />
+
+                <h4 class="text-sm pt-1 text-center">Add Money</h4>
+              </div>
+              <div
+                class="text-left bg-[#080808]/10 w-[110px] px-3 py-6 cursor-pointer rounded-2xl"
+                id="cashOutBtn"
+              >
+                <img
+                  class="mx-auto"
+                  src="src/assets/Money2.png"
+                  alt="Money2.png"
+                />
+
+                <h4 class="text-sm pt-1 text-center">Cashout</h4>
+              </div>
+              <div
+                class="text-left bg-[#080808]/10 w-[120px] px-2.5 py-6 mr-8 cursor-pointer rounded-2xl"
+                id="transferMoneyBtn"
+              >
+                <img
+                  class="mx-auto"
+                  src="src/assets/Money3.png"
+                  alt="Money3.png"
+                />
+
+                <h4 class="text-sm pt-1 text-center">Transfer Money</h4>
+              </div>
+            </div>
+            <div class="flex justify-between mt-5">
+              <div
+                class="text-left bg-[#080808]/10 w-[110px] px-3 py-6 ml-8 cursor-pointer rounded-2xl"
+                id="getBonusBtn"
+              >
+                <img
+                  class="mx-auto"
+                  src="src/assets/Money4.png"
+                  alt="Money4.png"
+                />
+
+                <h4 class="text-sm text-center pt-1">Get Bonus</h4>
+              </div>
+              <div
+                class="text-left bg-[#080808]/10 w-[110px] px-3 py-6 cursor-pointer rounded-2xl"
+                id="payBillBtn"
+              >
+                <img
+                  class="mx-auto"
+                  src="src/assets/Money5.png"
+                  alt="Money5.png"
+                />
+
+                <h4 class="text-sm text-center pt-1">Pay Bill</h4>
+              </div>
+              <div
+                class="text-left bg-[#080808]/10 w-[110px] px-3 py-6 mr-8 cursor-pointer rounded-2xl"
+                id="transactionsBtn"
+              >
+                <img
+                  class="mx-auto"
+                  src="src/assets/Money6.png"
+                  alt="Money6.png"
+                />
+
+                <h4 class="text-sm text-center pt-1">Transactions</h4>
+              </div>
+            </div>
+            <!-- Addmoney Screen Start  -->
+            <section id="addMoneyScreen" hidden>
+              <div class="max-w-[800px] mx-auto text-center">
+                <div class="mt-8 ml-8">
+                  <h3 class="text-[18px] text-left font-semibold">Add Money</h3>
+                </div>
+                <div class="">
+                  <h4 class="mt-5 ml-10 text-left text-base font-medium">
+                    Select A Bank
+                  </h4>
+                  <select
+                    class="text-left w-[350px] mt-4 p-3 bg-white rounded-4xl text-base font-light"
+                  >
+                    <option>Bangladesh Bank</option>
+                    <option>Islami Bank</option>
+                    <option>Sonali Bank</option>
+                  </select>
+                </div>
+                <div class="text-left ml-10 text-base font-medium">
+                  <h4>Bank Account Number</h4>
+                  <input
+                    class="p-3 bg-white border-0 outline-0 w-[350px] rounded-4xl"
+                    type="text"
+                    placeholder="Enter 11 digit account number"
+                  />
+                </div>
+                <div class="text-left ml-10 text-base font-medium">
+                  <h4>Amount to Add</h4>
+                  <input
+                    class="p-3 bg-white border-0 outline-0 w-[350px] rounded-4xl"
+                    id="addAmount"
+                    type="text"
+                    placeholder="Add Amount to withdraw"
+                  />
+                </div>
+                <div class="text-left ml-10 text-base font-medium">
+                  <h4>Pin Number</h4>
+                  <input
+                    class="p-3 bg-white border-0 outline-0 w-[350px] rounded-4xl"
+                    id="addMoneyPin"
+                    type="password"
+                    placeholder="Enter 4 digit pin number"
+                  />
+                </div>
+                <button
+                  class="py-2 mb-2 text-white text-base font-medium w-[300px] bg-[#0874F2] rounded-4xl border-0 mt-4 cursor-pointer"
+                  id="addMoneyAddBtn"
+                >
+                  Add Money
+                </button>
+                <div class="toast toast-top toast-center z-20">
+                  <div class="alert bg-red-600" id="addMoneyError" hidden>
+                    <span>Wrong Information</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- Addmoney Screen End  -->
+
+            <!-- Cash Screen Start -->
+            <section
+              class="max-w-[800px] mx-auto text-center"
+              id="cashOutScreen"
+              hidden
+            >
+              <div class="mt-8 ml-8">
+                <h3 class="text-[18px] text-left font-semibold">Cash Out</h3>
+              </div>
+
+              <div class="text-left mt-6 ml-10 text-base font-medium">
+                <h4>Agent Number</h4>
+                <input
+                  class="p-3 bg-white border-0 outline-0 w-[350px] rounded-4xl"
+                  type="text"
+                  placeholder="Enter 11 digit account number"
+                />
+              </div>
+              <div class="text-left mt-3 ml-10 text-base font-medium">
+                <h4>Amount</h4>
+                <input
+                  class="p-3 bg-white border-0 outline-0 w-[350px] rounded-4xl"
+                  id="cashOutInput"
+                  type="text"
+                  placeholder="Add Amount to withdraw"
+                />
+              </div>
+              <div class="text-left mt-3 ml-10 text-base font-medium">
+                <h4>Pin Number</h4>
+                <input
+                  class="p-3 bg-white border-0 outline-0 w-[350px] rounded-4xl"
+                  id="cashOutPin"
+                  type="text"
+                  placeholder="Enter 4 digit pin number"
+                />
+              </div>
+              <button
+                class="py-2 mb-2 text-white text-base font-medium w-[300px] font-outfit bg-[#0874F2] rounded-4xl border-0 mt-4 cursor-pointer"
+                id="cashOutBtnMoney"
+              >
+                Withdraw Money
+              </button>
+              <div class="toast toast-top toast-center z-20">
+                <div class="alert bg-red-600" id="cashOutError" hidden>
+                  <span>Wrong Information</span>
+                </div>
+              </div>
+            </section>
+            <!-- Cashout Screen End  -->
+
+            <!-- Transfer Money Screen Start  -->
+            <section
+              class="max-w-[800px] mx-auto text-center"
+              id="transferMoneyScreen"
+              hidden
+            >
+              <div class="mt-14 ml-8">
+                <h3 class="text-[18px] text-left font-semibold">
+                  Transfer Money
+                </h3>
+              </div>
+
+              <div class="text-left ml-10 mt-4 text-base font-medium">
+                <h4>User Account Number</h4>
+                <input
+                  class="p-3 bg-white border-0 outline-0 w-[350px] rounded-4xl"
+                  type="text"
+                  placeholder="Enter 11 digit account number"
+                />
+              </div>
+              <div class="text-left ml-10 text-base font-medium">
+                <h4>Amount to Add</h4>
+                <input
+                  class="p-3 bg-white border-0 outline-0 w-[350px] rounded-4xl"
+                  id="transferMoneyInput"
+                  type="text"
+                  placeholder="Add Amount to withdraw"
+                />
+              </div>
+              <div class="text-left ml-10 text-base font-medium">
+                <h4>Pin Number</h4>
+                <input
+                  class="p-3 bg-white border-0 outline-0 w-[350px] rounded-4xl"
+                  id="transferPin"
+                  type="text"
+                  placeholder="Enter 4 digit pin number"
+                />
+              </div>
+              <button
+                class="py-2 mb-2 text-white text-base font-medium w-[300px] bg-[#0874F2] rounded-4xl border-0 mt-4 cursor-pointer"
+                id="transfetBtnMoney"
+              >
+                Send Now
+              </button>
+              <div class="toast toast-top toast-center z-20">
+                <div class="alert bg-red-600" id="transferError" hidden>
+                  <span>Wrong Information</span>
+                </div>
+              </div>
+            </section>
+            <!-- Transfer Money Screen End  -->
+
+            <!-- Get Bonus screen Start  -->
+            <section
+              class="max-w-[800px] mx-auto text-center"
+              id="getBonusScreen"
+              hidden
+            >
+              <div class="mt-14 ml-8">
+                <h3 class="text-[18px] text-left font-semibold">Get Bonus</h3>
+              </div>
+
+              <div class="text-left ml-10 mt-6 text-base font-medium">
+                <h4>User Account Number</h4>
+                <input
+                  class="p-3 bg-white border-0 outline-0 w-[350px] rounded-4xl"
+                  type="text"
+                  placeholder="Enter 11 digit account number"
+                />
+              </div>
+
+              <button
+                class="py-2 mb-2 text-white text-base font-medium w-[300px] bg-[#0874F2] rounded-4xl border-0 mt-4 cursor-pointer"
+                id="getBonusBtnMoney"
+              >
+                Get Bonus
+              </button>
+              <div class="toast toast-top toast-center z-20">
+                <div class="alert bg-red-600" id="getBonusError" hidden>
+                  <span>Wrong Information</span>
+                </div>
+              </div>
+            </section>
+            <!-- Get Bonus screen End  -->
+
+            <!-- Pay Bill Screen Start  -->
+            <section
+              class="max-w-[800px] mx-auto text-center"
+              id="payBillScreen"
+              hidden
+            >
+              <div class="mt-8 ml-8">
+                <h3 class="text-[18px] text-left font-semibold">Pay Bill</h3>
+              </div>
+              <div class="">
+                <h4 class="mt-5 ml-10 text-left text-base font-medium">
+                  Select To Pay
+                </h4>
+                <select
+                  class="text-left w-[350px] mt-4 p-3 bg-white rounded-4xl text-base font-light"
+                >
+                  <option>Bangladesh Bank</option>
+                  <option>Islami Bank</option>
+                  <option>Sonali Bank</option>
+                </select>
+              </div>
+              <div class="text-left ml-10 text-base font-medium">
+                <h4>Biller Account Number</h4>
+                <input
+                  class="p-3 bg-white border-0 outline-0 w-[350px] rounded-4xl"
+                  type="text"
+                  placeholder="Enter 11 digit account number"
+                />
+              </div>
+              <div class="text-left ml-10 text-base font-medium">
+                <h4>Amount to Pay</h4>
+                <input
+                  class="p-3 bg-white border-0 outline-0 w-[350px] rounded-4xl"
+                  id="payBillInput"
+                  type="text"
+                  placeholder="Add Amount to withdraw"
+                />
+              </div>
+              <div class="text-left ml-10 text-base font-medium">
+                <h4>Pin Number</h4>
+                <input
+                  class="p-3 bg-white border-0 outline-0 w-[350px] rounded-4xl"
+                  id="payBillPin"
+                  type="text"
+                  placeholder="Enter 4 digit pin number"
+                />
+              </div>
+              <button
+                class="py-2 mb-2 text-white text-base font-medium w-[300px] bg-[#0874F2] rounded-4xl border-0 mt-4 cursor-pointer"
+                id="payBillBtnMoney"
+              >
+                Add Money
+              </button>
+              <div class="toast toast-top toast-center z-20">
+                <div class="alert bg-red-600" id="payBillError" hidden>
+                  <span>Wrong Information</span>
+                </div>
+              </div>
+            </section>
+            <!-- Pay Bill Screen End  -->
+
+            <!-- Transactions Screen Start  -->
+            <section
+              class="max-w-[800px] mx-auto text-center"
+              id="transctionsScreen"
+              hidden
+            >
+              <div class="flex justify-between mt-10">
+                <h3 class="text-[18px] font-semibold ml-8">
+                  Transaction History
+                </h3>
+                <a href="#" class="text-sm text-[#080808]/50 mr-8">View All</a>
+              </div>
+              <div
+                class="flex items-center justify-between mt-10 ml-7 mr-7 bg-white p-2 rounded-2xl"
+              >
+                <div class="w-[20%]">
+                  <img src="src/assets/Money1.png" alt="Money1.png" />
+                </div>
+                <div class="w-[60%] mr-[200px]">
+                  <h4 class="text-base font-semibold text-[#080808]/50">
+                    Electricity Bill
+                  </h4>
+                  <p class="text-xs text-[#080808]/70 pr-2.5">Today 01:44 AM</p>
+                </div>
+                <div class="w-[20%]">
+                  <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between mt-3 ml-7 mr-7 bg-white p-2 rounded-2xl"
+              >
+                <div class="w-[20%]">
+                  <img src="src/assets/Money1.png" alt="Money1.png" />
+                </div>
+                <div class="w-[60%] mr-[200px]">
+                  <h4 class="text-base font-semibold text-[#080808]/50">
+                    Bank Deposit
+                  </h4>
+                  <p class="text-xs text-[#080808]/70 pr-2.5">Today 01:44 AM</p>
+                </div>
+                <div class="w-[20%]">
+                  <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between mt-3 ml-7 mr-7 bg-white p-2 rounded-2xl"
+              >
+                <div class="w-[20%]">
+                  <img src="src/assets/Money1.png" alt="Money1.png" />
+                </div>
+                <div class="w-[70%] mr-[181px]">
+                  <h4 class="text-base font-semibold text-[#080808]/50">
+                    Mobile Recharge
+                  </h4>
+                  <p class="text-xs text-[#080808]/70 mr-8.5">Today 01:44 AM</p>
+                </div>
+                <div class="w-[10%] mr-1.5">
+                  <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between mt-3 ml-7 mr-7 bg-white p-2 rounded-2xl"
+              >
+                <div class="w-[20%]">
+                  <img src="src/assets/Money1.png" alt="Money1.png" />
+                </div>
+                <div class="w-[60%] mr-[200px]">
+                  <h4 class="text-base font-semibold text-[#080808]/50 mr-10.5">
+                    Gas Bill
+                  </h4>
+                  <p class="text-xs text-[#080808]/70 pr-2.5">Today 01:44 AM</p>
+                </div>
+                <div class="w-[20%]">
+                  <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                </div>
+              </div>
+            </section>
+            <!-- Transactions Screen End  -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dashboard Screen End  -->
+
+    <script src="src/js/script.js"></script>
+  </body>
+</html>
